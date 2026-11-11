@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos | VIARENT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+   <!-- CABEÇALHO -->
+<header class="cabecalho">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Imagens/logotipo.png" alt="Logótipo VIARENT">
+        </a>
+    </div>
+
+    <div class="acoes-menu">
+        <button class="botao-menu" id="botaoMenu">☰</button>
+        <a href="login.html" class="botao-entrar">Login</a>
+    </div>
+
+    <nav id="menuNavegacao">
+        <a href="index.html">Início</a>
+        <a href="viaturas.html">Viaturas</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
+
+</header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="contactos-hero">
+
+            <h1>Entre em <span>Contacto</span></h1>
+
+            <p>
+                Estamos aqui para ajudar.
+                Entre em contacto connosco e esclareça as suas dúvidas.
+            </p>
+
+        </section>
+
+
+        <!-- INFORMAÇÕES E FORMULÁRIO -->
+        <section class="contactos-container">
+
+            <!-- INFORMAÇÕES -->
+            <div class="informacoes-contacto">
+
+                <h2>Fale connosco</h2>
+
+                <p>
+                    Tem alguma questão ou precisa de ajuda?
+                    Utilize os nossos contactos.
+                </p>
+
+                <div class="contacto-item">
+                    <h3>Email</h3>
+                    <p>contacto@viarent.pt</p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>Telefone</h3>
+                    <p>+351 900 000 000</p>
+                </div>
+
+                <div class="contacto-item">
+                    <h3>Localização</h3>
+                    <p>Coimbra, Portugal</p>
+                </div>
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+            <div class="formulario-contacto">
+
+                <h2>Envie-nos uma mensagem</h2>
+
+                <form id="formContacto">
+
+                    <div class="grupo-campo">
+                        <label for="nomeContacto">Nome completo</label>
+                        <input type="text" id="nomeContacto"
+                               placeholder="O seu nome" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="emailContacto">Email</label>
+                        <input type="email" id="emailContacto"
+                               placeholder="O seu email" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="assuntoContacto">Assunto</label>
+                        <input type="text" id="assuntoContacto"
+                               placeholder="Assunto da mensagem" required>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="mensagemContacto">Mensagem</label>
+                        <textarea id="mensagemContacto"
+                                  placeholder="Escreva a sua mensagem..."
+                                  rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar mensagem</button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>© 2026 VIARENT. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

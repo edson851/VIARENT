@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIARENT - Reservas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+<header class="cabecalho">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Imagens/logotipo.png" alt="Logótipo VIARENT">
+        </a>
+    </div>
+
+    <div class="acoes-menu">
+        <button class="botao-menu" id="botaoMenu">☰</button>
+        <a href="login.html" class="botao-entrar">Login</a>
+    </div>
+
+    <nav id="menuNavegacao">
+        <a href="index.html">Início</a>
+        <a href="viaturas.html">Viaturas</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
+
+</header>
+    <!-- FORMULÁRIO DE RESERVA -->
+
+    <main>
+
+        <section class="secao-reservas">
+
+            <h2>Faça a sua reserva</h2>
+
+            <p>Escolha a sua viatura e prepare a sua viagem.</p>
+
+            <form id="formReserva">
+
+                <div class="grupo-campo">
+
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome"
+                           placeholder="Introduza o seu nome" required>
+
+                </div>
+
+                <div class="grupo-campo">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email"
+                           placeholder="Introduza o seu email" required>
+
+                </div>
+
+                <div class="grupo-campo">
+
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone"
+                           placeholder="Introduza o seu telefone" required>
+
+                </div>
+
+                <div class="grupo-campo">
+
+                    <label for="viatura">Escolha a viatura</label>
+
+                    <select id="viatura" required>
+
+                        <option value="">Selecione uma viatura</option>
+                        <option value="45">BMW Série 1 - 45 €/dia</option>
+                        <option value="55">Peugeot 3008 - 55 €/dia</option>
+                        <option value="40">Renault Clio - 40 €/dia</option>
+                        <option value="75">Mercedes-Benz Classe E - 75 €/dia</option>
+                        <option value="85">Audi A8 - 85 €/dia</option>
+                        <option value="95">Toyota Prado - 95 €/dia</option>
+
+                    </select>
+
+                </div>
+
+                <div class="grupo-campo">
+
+                    <label for="dataLevantamento">Data de levantamento</label>
+                    <input type="date" id="dataLevantamento" required>
+
+                </div>
+
+                <div class="grupo-campo">
+
+                    <label for="dataDevolucao">Data de devolução</label>
+                    <input type="date" id="dataDevolucao" required>
+
+                </div>
+
+                <div class="resultado-preco">
+
+                    <h3>Preço total do aluguer</h3>
+
+                    <p id="precoTotal">0,00 €</p>
+
+                </div>
+
+                <button type="submit">Confirmar reserva</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <a href="sobre.html">Sobre a VIARENT</a>
+        <a href="contactos.html">Contactos</a>
+
+        <p>© 2026 VIARENT - Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

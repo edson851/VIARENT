@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIARENT - Viaturas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+<header class="cabecalho">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Imagens/logotipo.png" alt="Logótipo VIARENT">
+        </a>
+    </div>
+
+    <div class="acoes-menu">
+        <button class="botao-menu" id="botaoMenu">☰</button>
+        <a href="login.html" class="botao-entrar">Login</a>
+    </div>
+
+    <nav id="menuNavegacao">
+        <a href="index.html">Início</a>
+        <a href="viaturas.html">Viaturas</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
+
+</header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <section class="catalogo-viaturas">
+
+            <h2>As nossas viaturas</h2>
+
+            <p>Encontre o automóvel ideal para a sua viagem.</p>
+
+             <!-- PESQUISA DE VIATURAS -->
+
+<div class="pesquisa-catalogo">
+
+    <input
+        type="text"
+        id="pesquisaViatura"
+        placeholder="Pesquisar por marca ou modelo..."
+    >
+
+</div>
+
+
+
+    <div class="categorias">
+
+    <button class="categoria ativa" data-filtro="todos">Todas</button>
+
+    <button class="categoria" data-filtro="economicos">Económicos</button>
+
+    <button class="categoria" data-filtro="suv">SUV</button>
+
+    <button class="categoria" data-filtro="sedan">Sedan</button>
+
+</div>
+<!-- ORDENAÇÃO POR PREÇO -->
+
+<div class="ordenacao">
+
+    <label for="ordenarPreco">Ordenar por preço:</label>
+
+    <select id="ordenarPreco">
+        <option value="normal">Ordenação normal</option>
+        <option value="menor">Preço mais baixo</option>
+        <option value="maior">Preço mais alto</option>
+    </select>
+
+</div>
+
+  
+<div class="lista-viaturas">
+
+    
+<!-- BMW SÉRIE 1 -->
+
+<div class="cartao" data-categoria="economicos">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/bmw-serie1.jpg"
+             alt="BMW Série 1">
+    </div>
+
+    <h3>BMW Série 1</h3>
+
+    <p>45 € / dia</p>
+
+   
+    <div class="caracteristicas">
+        <span>5 lugares</span>
+        <span>Manual</span>
+        <span>Diesel</span>
+    </div>
+
+    <a href="reservas.html?viatura=45">Reservar agora</a>
+</div>
+<!-- PEUGEOT 3008 -->
+
+<div class="cartao" data-categoria="suv">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/peugeot-3008.jpg"
+             alt="Peugeot 3008">
+    </div>
+
+    <h3>Peugeot 3008</h3>
+
+    <p>55 € / dia</p>
+
+    <div class="caracteristicas">
+        <span>5 lugares</span>
+        <span>Automática</span>
+        <span>Diesel</span>
+    </div>
+
+    <a href="reservas.html?viatura=55">Reservar agora</a>
+</div>
+
+
+<!-- RENAULT CLIO -->
+
+<div class="cartao" data-categoria="economicos">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/renault-clio.jpg"
+             alt="Renault Clio">
+    </div>
+
+    <h3>Renault Clio</h3>
+
+    <p>40 € / dia</p>
+
+    <div class="caracteristicas">
+        <span>5 lugares</span>
+        <span>Automática</span>
+        <span>Gasolina</span>
+    </div>
+
+    <a href="reservas.html?viatura=40">Reservar agora</a>
+
+</div>
+<!-- MERCEDES-BENZ CLASSE E -->
+
+<div class="cartao" data-categoria="sedan">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/mercedes-classe-e.jpg"
+             alt="Mercedes-Benz Classe E">
+    </div>
+
+    <h3>Mercedes-Benz Classe E</h3>
+
+    <p>75 € / dia</p>
+
+    <div class="caracteristicas">
+        <span>5 lugares</span>
+        <span>Automática</span>
+        <span>Diesel</span>
+    </div>
+
+   <a href="reservas.html?viatura=75">Reservar agora</a>
+
+</div>
+<!-- AUDI A8 -->
+
+<div class="cartao" data-categoria="sedan">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/audi-a8.jpg"
+             alt="Audi A8">
+    </div>
+
+    <h3>Audi A8</h3>
+
+    <p>85 € / dia</p>
+
+    <div class="caracteristicas">
+        <span>5 lugares</span>
+        <span>Automática</span>
+        <span>Diesel</span>
+    </div>
+
+    <a href="reservas.html?viatura=85">Reservar agora</a>
+
+</div>
+
+<!-- TOYOTA PRADO -->
+
+<div class="cartao" data-categoria="suv">
+
+    <div class="imagem-viatura">
+        <img src="Imagens/viaturas/toyota-prado.jpg"
+             alt="Toyota Prado">
+    </div>
+
+    <h3>Toyota Prado</h3>
+
+    <p>95 € / dia</p>
+
+    <div class="caracteristicas">
+        <span>7 lugares</span>
+        <span>Automática</span>
+        <span>Diesel</span>
+    </div>
+
+    <a href="reservas.html?viatura=95">Reservar agora</a>
+</div>
+
+
+</div>
+
+
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <a href="sobre.html">Sobre a VIARENT</a>
+        <a href="contactos.html">Contactos</a>
+
+        <p>© 2026 VIARENT - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

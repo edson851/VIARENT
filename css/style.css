@@ -1,0 +1,1452 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: white;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #080D14;
+    padding: 10px 1%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #1c2b3a;
+}
+
+/* LOGOTIPO */
+
+ .logo {
+    margin-left: -25px;
+}
+.logo img {
+    width: 250px;
+    height: 85px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(1.3);
+}
+   
+
+
+
+/* MENU DE NAVEGAÇÃO */
+
+.cabecalho nav {
+    display: flex;
+    gap: 35px;
+}
+
+.cabecalho nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.cabecalho nav a:hover,
+.cabecalho nav a.ativo {
+    color: #00A8FF;
+}
+
+/* BOTÃO ENTRAR */
+
+.botao-entrar {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 22px;
+    border-radius: 25px;
+}
+
+
+/* CABEÇALHO RESPONSIVO */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .cabecalho nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .botao-entrar {
+    display: inline-block;
+    margin: 10px auto;
+}
+}
+
+/* BOTÃO DO TELEMÓVEL */
+
+.botao-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* APRESENTAÇÃO INICIAL */
+
+
+
+.inicio {
+    min-height: 500px;
+    padding: 60px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 13, 20, 0.96) 0%,
+            rgba(8, 13, 20, 0.78) 40%,
+            rgba(8, 13, 20, 0.20) 100%
+        ),
+        url("../Imagens/viaturas/carro-principal.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.conteudo-inicio {
+    width: 100%;
+    max-width: 750px;
+}
+
+.inicio h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.inicio h2 span {
+    color: #00A8FF;
+}
+
+.inicio p {
+    font-size: 19px;
+    color: #B8C5D1;
+    margin-bottom: 30px;
+}
+
+
+
+/* CAMPO DE PESQUISA */
+
+/* PESQUISA DE VIATURAS */
+
+.pesquisa-viaturas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 950px;
+    padding: 15px;
+    background-color: #111B29;
+    border: 1px solid #26394B;
+    border-radius: 12px;
+}
+
+.pesquisa-viaturas input {
+    flex: 1;
+    min-width: 150px;
+    width: auto;
+    padding: 14px;
+    background-color: #080D14;
+    border: 1px solid #26394B;
+    border-radius: 7px;
+    color: white;
+    font-size: 14px;
+}
+
+.pesquisa-viaturas button {
+    padding: 14px 25px;
+    background-color: #00A8FF;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+/* VIATURAS EM DESTAQUE */
+
+.destaques {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.destaques h2 {
+    font-size: 24px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer p {
+    margin-top: 20px;
+    color: #aaaaaa;
+}
+
+
+/* LISTA DE VIATURAS */
+
+.lista-viaturas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* CARTÕES */
+/* CARTÕES DAS VIATURAS */
+
+.cartao {
+    width: 250px;
+    background-color: #080D14;
+    border: 1px solid #174766;
+    border-radius: 12px;
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.cartao:hover {
+    border-color: #00A8FF;
+    transform: translateY(-5px);
+}
+
+
+/* ESPAÇO DAS IMAGENS */
+
+.imagem-viatura {
+    height: 160px;
+    background-color: #071A2B;
+    border-bottom: 1px solid #174766;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagem-viatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INFORMAÇÕES DO AUTOMÓVEL */
+
+.cartao h3 {
+    margin-top: 15px;
+}
+
+.cartao p {
+    margin: 10px;
+    color: #00A8FF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* LIGAÇÃO PARA DETALHES */
+
+/* BOTÕES DOS CARTÕES */
+
+.cartao a {
+    display: inline-block;
+    color: #00A8FF;
+    text-decoration: none;
+    border: 1px solid #00A8FF;
+    padding: 9px 20px;
+    border-radius: 25px;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.cartao a:hover {
+    background-color: #00A8FF;
+    color: white;
+}
+
+
+/* RESPONSIVIDADE PARA TELEMÓVEIS */
+
+    @media (max-width: 768px) {
+
+    /* APRESENTAÇÃO INICIAL */
+
+        .inicio {
+        flex-direction: column;
+        padding: 35px 20px;
+        gap: 5px;
+       }
+
+       .conteudo-inicio {
+        width: 100%;
+        }
+
+       .inicio h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        }
+
+    /* PESQUISA */
+
+      .pesquisa-viaturas {
+        flex-direction: column;
+        align-items: stretch;
+        }
+
+      .pesquisa-viaturas input,
+      .pesquisa-viaturas button {
+        width: 100%;
+        }
+
+    /* IMAGEM PRINCIPAL  Telemovel*/
+
+      .imagem-principal {
+        width: 100%;
+        flex: none;
+        }
+
+      .imagem-principal img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+        transform: scale(1.15);
+        display: none;
+        }
+    }
+    
+.inicio .imagem-principal {
+    display: none;
+}
+
+    /* VIATURAS EM DESTAQUE */
+
+    
+/* VIATURAS NO TELEMÓVEL */
+
+
+@media (max-width: 768px) {
+
+    /* APRESENTAÇÃO INICIAL */
+
+    .inicio {
+        min-height: 620px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+        gap: 20px;
+
+        background-position: 65% center;
+        background-size: cover;
+    }
+
+    .conteudo-inicio {
+        width: 100%;
+    }
+
+    .inicio h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+
+    .pesquisa-viaturas {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pesquisa-viaturas input,
+    .pesquisa-viaturas button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* ESCONDER A IMAGEM HTML DUPLICADA */
+
+    .inicio .imagem-principal {
+        display: none;
+    }
+
+    /* CARTÕES NO TELEMÓVEL */
+
+    .lista-viaturas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .imagem-viatura {
+        height: 180px;
+    }
+
+    .imagem-viatura img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+
+
+/* IMAGEM PRINCIPAL DO AUTOMÓVEL */
+
+.imagem-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-principal img {
+    width: 100%;
+    max-width: 650px;
+    height: 380px;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: screen;
+    filter: drop-shadow(0 0 25px rgba(0, 168, 255, 0.35));
+}
+
+/* VIATURAS NA VERSÃO DE COMPUTADOR */
+
+@media (min-width: 769px) {
+
+    .lista-viaturas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .cartao {
+        width: 250px;
+        flex: 0 0 250px;
+    }
+
+}
+
+
+/* CARACTERÍSTICAS DAS VIATURAS */
+
+.caracteristicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 8px;
+}
+
+.caracteristicas span {
+    color: #cccccc;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* PÁGINA DE VIATURAS */
+
+.catalogo-viaturas {
+    text-align: center;
+    padding: 70px 6%;
+}
+
+.catalogo-viaturas h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.catalogo-viaturas p {
+    font-size: 18px;
+    color: #B8C5D1;
+}
+
+
+/* CATEGORIAS DAS VIATURAS */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.categoria {
+    background-color: #080D14;
+    color: white;
+    border: 1px solid #00A8FF;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categoria:hover,
+.categoria.ativa {
+    background-color: #00A8FF;
+    color: white;
+}
+
+/* ORGANIZAÇÃO DO CATÁLOGO EM 3 COLUNAS */
+
+@media (min-width: 1024px) {
+
+    .lista-viaturas {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .cartao {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+}
+
+/* PESQUISA DO CATÁLOGO */
+
+.pesquisa-catalogo {
+    margin: 30px auto;
+    max-width: 450px;
+}
+
+.pesquisa-catalogo input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #00A8FF;
+    border-radius: 25px;
+    background-color: #111B29;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.pesquisa-catalogo input:focus {
+    box-shadow: 0 0 10px #00A8FF;
+}
+
+.pesquisa-catalogo input::placeholder {
+    color: #B8C5D1;
+}
+
+/* ORDENAÇÃO DAS VIATURAS */
+
+.ordenacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 30px;
+    color: white;
+}
+
+.ordenacao label {
+    font-size: 15px;
+}
+
+.ordenacao select {
+    padding: 10px 15px;
+    border: 1px solid #00A8FF;
+    border-radius: 20px;
+    background-color: #111B29;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* PÁGINA DE RESERVAS */
+/* ============================= */
+
+.secao-reservas {
+    max-width: 750px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #080D14;
+    border: 1px solid #174766;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.10);
+}
+
+.secao-reservas h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.secao-reservas > p {
+    text-align: center;
+    color: #B8C5D1;
+    margin-bottom: 35px;
+}
+
+#formReserva {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    color: white;
+    font-weight: bold;
+}
+
+.grupo-campo input,
+.grupo-campo select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+    outline: none;
+    border-color: #00A8FF;
+    box-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+}
+
+.resultado-preco {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: #111B29;
+    border: 1px solid #00A8FF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.resultado-preco h3 {
+    margin-bottom: 10px;
+}
+
+.resultado-preco p {
+    color: #00A8FF;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#formReserva button {
+    grid-column: 1 / -1;
+    padding: 14px;
+    background-color: #00A8FF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formReserva button:hover {
+    background-color: #0085CC;
+    transform: translateY(-2px);
+}
+
+/* ADAPTAÇÃO PARA TELEMÓVEIS */
+
+@media (max-width: 768px) {
+
+    .secao-reservas {
+        margin: 30px 15px;
+        padding: 25px 18px;
+    }
+
+    #formReserva {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================================= */
+/* PÁGINA DE LOGIN */
+/* ================================= */
+
+.secao-login {
+    max-width: 450px;
+    margin: 70px auto;
+    padding: 40px;
+    background-color: #080D14;
+    border: 1px solid #174766;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.12);
+}
+
+.secao-login h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.secao-login > p {
+    text-align: center;
+    color: #B8C5D1;
+    margin-bottom: 35px;
+}
+
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+#formLogin .grupo-campo input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+#formLogin .grupo-campo input:focus {
+    outline: none;
+    border-color: #00A8FF;
+    box-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+}
+
+.esqueceu-password {
+    color: #00A8FF;
+    text-align: right;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#formLogin button {
+    padding: 14px;
+    background-color: #00A8FF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formLogin button:hover {
+    background-color: #0085CC;
+    transform: translateY(-2px);
+}
+
+.criar-conta {
+    text-align: center;
+    color: #B8C5D1;
+    font-size: 14px;
+}
+
+.criar-conta a {
+    color: #00A8FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .secao-login {
+        margin: 35px 15px;
+        padding: 25px 20px;
+    }
+}
+
+
+/* ================================= */
+/* BOTÃO ENTRAR */
+/* ================================= */
+
+.botao-entrar {
+    background-color: #00A8FF;
+    color: #FFFFFF !important;
+    padding: 11px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #00A8FF;
+    transition: all 0.3s ease;
+}
+
+.botao-entrar:hover {
+    background-color: transparent;
+    color: #00A8FF !important;
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+
+
+/* ================================= */
+/* PÁGINA SOBRE NÓS */
+/* ================================= */
+
+.sobre-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #080D14, #111B29);
+}
+
+.sobre-hero h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sobre-hero h1 span {
+    color: #00A8FF;
+}
+
+.sobre-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #B8C5D1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.sobre-conteudo {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sobre-bloco {
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.sobre-bloco:hover {
+    transform: translateY(-5px);
+    border-color: #00A8FF;
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.15);
+}
+
+.sobre-bloco h2 {
+    color: #00A8FF;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.sobre-bloco p {
+    color: #B8C5D1;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.sobre-equipa {
+    text-align: center;
+    padding: 50px 20px 80px;
+}
+
+.sobre-equipa > h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.sobre-equipa > p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #B8C5D1;
+    line-height: 1.7;
+}
+
+.equipa-cartoes {
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.equipa-membro {
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 12px;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.equipa-membro:hover {
+    border-color: #00A8FF;
+    transform: translateY(-5px);
+}
+
+.equipa-membro h3 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.equipa-membro p {
+    color: #00A8FF;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    .sobre-hero {
+        padding: 55px 20px;
+    }
+
+    .sobre-hero h1 {
+        font-size: 32px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        margin: 35px auto;
+    }
+
+    .equipa-cartoes {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================================= */
+/* AVATARES DA EQUIPA */
+/* ================================= */
+
+.avatar-equipa {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #00A8FF, #005A99);
+    color: white;
+
+    border: 3px solid #174766;
+    border-radius: 50%;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.25);
+    transition: 0.3s;
+}
+
+.equipa-membro:hover .avatar-equipa {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
+}
+
+
+/* ================================= */
+/* OS NOSSOS VALORES */
+/* ================================= */
+
+.sobre-valores {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #080D14;
+}
+
+.sobre-valores > h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.introducao-valores {
+    color: #B8C5D1;
+    margin-bottom: 40px;
+}
+
+.valores-cartoes {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.valor-cartao {
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 12px;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.valor-cartao:hover {
+    transform: translateY(-5px);
+    border-color: #00A8FF;
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.15);
+}
+
+.valor-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00A8FF;
+    color: white;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.valor-cartao h3 {
+    color: #00A8FF;
+    margin-bottom: 15px;
+}
+
+.valor-cartao p {
+    color: #B8C5D1;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .valores-cartoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .valores-cartoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================================= */
+/* PÁGINA CONTACTOS */
+/* ================================= */
+
+.contactos-hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #080D14, #111B29);
+}
+
+.contactos-hero h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.contactos-hero h1 span {
+    color: #00A8FF;
+}
+
+.contactos-hero p {
+    color: #B8C5D1;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ORGANIZAÇÃO DA PÁGINA */
+
+.contactos-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 30px;
+}
+
+/* INFORMAÇÕES DE CONTACTO */
+
+.informacoes-contacto,
+.formulario-contacto {
+    background-color: #111B29;
+    border: 1px solid #174766;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.informacoes-contacto h2,
+.formulario-contacto h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.informacoes-contacto > p {
+    color: #B8C5D1;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contacto-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #174766;
+}
+
+.contacto-item:last-child {
+    border-bottom: none;
+}
+
+.contacto-item h3 {
+    color: #00A8FF;
+    margin-bottom: 8px;
+}
+
+.contacto-item p {
+    color: #B8C5D1;
+    font-size: 15px;
+}
+
+/* FORMULÁRIO */
+
+#formContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#formContacto .grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formContacto .grupo-campo label {
+    color: white;
+    font-weight: bold;
+}
+
+#formContacto input,
+#formContacto textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    background-color: #080D14;
+    border: 1px solid #174766;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+#formContacto textarea {
+    resize: vertical;
+}
+
+#formContacto input:focus,
+#formContacto textarea:focus {
+    outline: none;
+    border-color: #00A8FF;
+    box-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+}
+
+/* BOTÃO ENVIAR */
+
+#formContacto button {
+    padding: 14px;
+    background-color: #00A8FF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formContacto button:hover {
+    background-color: #0085CC;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .contactos-hero {
+        padding: 45px 20px;
+    }
+
+    .contactos-hero h1 {
+        font-size: 32px;
+    }
+
+    .contactos-container {
+        grid-template-columns: 1fr;
+        margin: 35px auto;
+    }
+
+}
+
+
+/* ALINHAMENTO DO MENU DE NAVEGAÇÃO */
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.cabecalho nav a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cabecalho nav .botao-entrar {
+    justify-content: center;
+    margin: 0;
+    line-height: 1;
+}
+
+
+/* MELHORAR A VISIBILIDADE DAS VIATURAS */
+
+.cartao img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    
+}
+
+/* GARANTIR BOTÃO VISÍVEL NO TELEMÓVEL */
+
+@media (max-width: 768px) {
+    .botao-menu {
+        display: block;
+    }
+}
+
+/* ORGANIZAÇÃO DOS BOTÕES NO TELEMÓVEL */
+
+.acoes-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .acoes-menu .botao-menu {
+        display: block;
+    }
+
+    .acoes-menu .botao-entrar {
+        display: inline-block;
+        margin: 0;
+        padding: 9px 18px;
+    }
+
+}
+
+/* ORGANIZAÇÃO DO CABEÇALHO */
+
+/* COMPUTADOR */
+@media (min-width: 769px) {
+
+    .logo {
+        order: 1;
+    }
+
+    .cabecalho nav {
+        order: 2;
+    }
+
+    .acoes-menu {
+        order: 3;
+    }
+
+    .acoes-menu .botao-menu {
+        display: none;
+    }
+
+    .acoes-menu .botao-entrar {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+/* TELEMÓVEL */
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .acoes-menu {
+        order: 2;
+    }
+
+    .cabecalho nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .acoes-menu .botao-menu {
+        display: block;
+    }
+
+    .acoes-menu .botao-entrar {
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+/* FUNDO AZUL DA PÁGINA VIATURAS NO TELEMÓVEL */
+
+@media (max-width: 768px) {
+
+    .catalogo-viaturas {
+        background: linear-gradient(
+            180deg,
+            #0B2740 0%,
+            #102F4A 50%,
+            #080D14 100%
+        );
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .cabecalho nav {
+        display: none;
+    }
+
+    .cabecalho nav.menu-aberto {
+        display: flex;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+    .cabecalho nav {
+        display: flex;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | VIARENT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+<header class="cabecalho">
+
+    <div class="logo">
+        <a href="index.html">
+            <img src="Imagens/logotipo.png" alt="Logótipo VIARENT">
+        </a>
+    </div>
+
+    <div class="acoes-menu">
+        <button class="botao-menu" id="botaoMenu">☰</button>
+        <a href="login.html" class="botao-entrar">Login</a>
+    </div>
+
+    <nav id="menuNavegacao">
+        <a href="index.html">Início</a>
+        <a href="viaturas.html">Viaturas</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
+
+</header>
+
+    <main class="secao-login">
+
+        <h2>Bem-vindo à VIARENT</h2>
+        <p>Inicie sessão para continuar.</p>
+
+        <form id="formLogin">
+
+            <div class="grupo-campo">
+                <label for="emailLogin">Email</label>
+                <input type="email" id="emailLogin"
+                       placeholder="Introduza o seu email" required>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="passwordLogin">Palavra-passe</label>
+                <input type="password" id="passwordLogin"
+                       placeholder="Introduza a sua palavra-passe" required>
+            </div>
+
+            <a href="#" class="esqueceu-password">
+                Esqueceu-se da palavra-passe?
+            </a>
+
+            <button type="submit">Iniciar sessão</button>
+
+            <p class="criar-conta">
+                Ainda não tem conta?
+                <a href="#">Criar conta</a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>
