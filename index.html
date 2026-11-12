@@ -59,17 +59,46 @@
             qualidade e os melhores preços.
         </p>
 
-        <div class="pesquisa-viaturas">
+       
 
-            <input type="text" placeholder="Local de levantamento">
+<form class="pesquisa-viaturas" id="formPesquisa">
 
-            <input type="date">
+    <input
+        type="text"
+        id="localLevantamento"
+        placeholder="Local de levantamento"
+        required
+    >
 
-            <input type="date">
+    <div class="campo-pesquisa">
+        <label for="dataLevantamento">
+            Data de levantamento
+        </label>
 
-            <button>Pesquisar</button>
+        <input
+            type="date"
+            id="dataLevantamento"
+            required
+        >
+    </div>
 
-        </div>
+    <div class="campo-pesquisa">
+        <label for="dataDevolucao">
+            Data de entrega
+        </label>
+
+        <input
+            type="date"
+            id="dataDevolucao"
+            required
+        >
+    </div>
+
+    <button type="submit">Pesquisar</button>
+
+</form>
+
+
 
     </div>
 

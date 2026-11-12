@@ -116,6 +116,27 @@ if (formReserva) {
     const levantamento = document.querySelector("#dataLevantamento");
     const devolucao = document.querySelector("#dataDevolucao");
     const precoTotal = document.querySelector("#precoTotal");
+    const localReserva = document.querySelector("#localReserva");
+
+    // RECEBER DADOS DA PESQUISA DA PÁGINA INICIAL
+
+const parametros = new URLSearchParams(window.location.search);
+
+const localRecebido = parametros.get("local");
+const levantamentoRecebido = parametros.get("levantamento");
+const devolucaoRecebida = parametros.get("devolucao");
+
+if (localRecebido) {
+    localReserva.value = localRecebido;
+}
+
+if (levantamentoRecebido) {
+    levantamento.value = levantamentoRecebido;
+}
+
+if (devolucaoRecebida) {
+    devolucao.value = devolucaoRecebida;
+}
 
     // Impedir datas anteriores a hoje
     const hoje = new Date();
@@ -153,7 +174,7 @@ if (formReserva) {
     }
 
     // SELECIONAR AUTOMATICAMENTE A VIATURA
-    const parametros = new URLSearchParams(window.location.search);
+   
     const precoRecebido = parametros.get("viatura");
 
     if (precoRecebido) {
@@ -255,6 +276,70 @@ if (botaoMenu && menuNavegacao) {
         if (window.innerWidth > 768) {
             menuNavegacao.classList.remove("menu-aberto");
         }
+
+    });
+
+}
+
+
+/* ================================= */
+/* PESQUISA DE VIATURAS NA PÁGINA INICIAL */
+/* ================================= */
+
+const formPesquisa = document.querySelector("#formPesquisa");
+
+if (formPesquisa) {
+
+    const local = document.querySelector("#localLevantamento");
+    const levantamento = document.querySelector("#dataLevantamento");
+    const devolucao = document.querySelector("#dataDevolucao");
+
+    // Impedir a escolha de datas anteriores a hoje
+    const hoje = new Date();
+    hoje.setMinutes(hoje.getMinutes() - hoje.getTimezoneOffset());
+
+    const dataAtual = hoje.toISOString().split("T")[0];
+
+    levantamento.min = dataAtual;
+    devolucao.min = dataAtual;
+
+    // Atualizar a data mínima de devolução
+    levantamento.addEventListener("change", function() {
+
+        devolucao.min = levantamento.value;
+
+        if (devolucao.value && devolucao.value <= levantamento.value) {
+            devolucao.value = "";
+        }
+
+    });
+
+    // Executar a pesquisa
+    formPesquisa.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const nomeLocal = local.value.trim();
+
+        if (!nomeLocal || !levantamento.value || !devolucao.value) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        if (devolucao.value <= levantamento.value) {
+            alert("A data de devolução deve ser posterior à data de levantamento.");
+            return;
+        }
+
+        // Preparar os dados da pesquisa
+        const parametros = new URLSearchParams();
+
+        parametros.set("local", nomeLocal);
+        parametros.set("levantamento", levantamento.value);
+        parametros.set("devolucao", devolucao.value);
+
+        // Encaminhar para a página de reservas
+        window.location.href = "reservas.html?" + parametros.toString();
 
     });
 
